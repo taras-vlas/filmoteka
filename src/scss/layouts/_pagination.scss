@@ -1,22 +1,16 @@
-.pagination-list {
-  text-align: center;
+.pagination-container {
   margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pagination-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pagination-item:not(:last-child) {
+.pagination-button:not(:last-child),
+.dots {
   margin-right: 16px;
 }
 
-.pagination-item__button {
+.pagination-button {
   padding: 0;
   background-color: $white-text-color;
   border: none;
@@ -49,10 +43,4 @@
   border-radius: 5px;
   background-color: $secondary-background-color;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.arrow-button {
-  background-color: $secondary-background-color;
-  width: 16px;
-  height: 16px;
 }
