@@ -29,6 +29,8 @@ function onPaginationClick(event) {
     if (Number(event.target.textContent)) {
         currentPage = event.target.textContent;
     }
+
+    console.log(event.target);
    
     prevDotsRef.hidden = true;
     afterDotsRef.hidden = true;
@@ -38,7 +40,7 @@ function onPaginationClick(event) {
         event.target.classList.add('current');
     };
 
-    if (event.target.classList.contains('arrow-right') && currentPage < 999) {
+    if ((event.target.tagName === 'SVG' || event.target.classList.contains('arrow-right')) && currentPage < 999) {
         btns.forEach((el) => el.classList.remove("current"))
         btn1Ref.classList.add("current");
         btn1Ref.textContent = Number(btn1Ref.textContent) + 5;
